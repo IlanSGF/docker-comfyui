@@ -41,7 +41,8 @@ RUN python3 -m venv venv && \
     venv/bin/pip install --upgrade pip && \
     venv/bin/pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
-# TODO add ComfyUI manager
+# ComfyUI manager
+RUN git clone https://github.com/ltdrdata/ComfyUI-Manager /app/repo/custom_nodes/comfyui-manager
 
 # Expose port 8188 for Web UI
 EXPOSE 8188
